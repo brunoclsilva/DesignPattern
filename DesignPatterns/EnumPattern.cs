@@ -6,6 +6,7 @@
         FactoryMethod,
         AbstractFactory,
         Builder,
-        Prototype
+        Prototype,
+        Adapter
     }
 }

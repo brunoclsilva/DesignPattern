@@ -1,6 +1,9 @@
 ﻿using DesignPatterns.Creational.AbstractFactory;
+using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.FactoryMethod;
+using DesignPatterns.Creational.Prototype;
 using DesignPatterns.Creational.Singleton;
+using DesignPatterns.Structural.Adapter;
 
 namespace DesignPatterns
 {
@@ -15,6 +18,8 @@ namespace DesignPatterns
             Console.WriteLine("3 - Abstract Factory");
             Console.WriteLine("4 - Builder");
             Console.WriteLine("5 - Prototype");
+            Console.WriteLine("\nSTRUCTURALS");
+            Console.WriteLine("6 - Adapter");
 
             Int32.TryParse(Console.ReadLine(), out int pattern);
             switch (pattern)
@@ -29,15 +34,19 @@ namespace DesignPatterns
                     _ = new ProcessorAbstractFactory();
                     break;
                 case (int)EnumPattern.Builder:
-                    //_ = new ProcessorBuilder();
+                    _ = new ProcessorBuilder();
                     break;
                 case (int)EnumPattern.Prototype:
-                    //_ = new ProcessorPrototype();
+                    _ = new ProcessorPrototype();
+                    break;
+                case (int)EnumPattern.Adapter:
+                    _ = new ProcessorAdapter();
                     break;
                 default:
                     throw new ArgumentException("You must choose a pattern from the list above!");
             }
 
+            Console.WriteLine();
             Console.WriteLine($"End of {(EnumPattern)pattern} execution!");
         }
     }
