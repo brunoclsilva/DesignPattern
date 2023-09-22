@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.Behavioral.ChainResponsability;
+using DesignPatterns.Behavioral.Command;
 using DesignPatterns.Creational.AbstractFactory;
 using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.FactoryMethod;
@@ -35,6 +36,7 @@ namespace DesignPatterns
             Console.WriteLine("12 - Proxy");
             Console.WriteLine("\nBEHAVIORAL");
             Console.WriteLine("13 - Chain of Responsability");
+            Console.WriteLine("14 - Command");
 
             Int32.TryParse(Console.ReadLine(), out int pattern);
             switch (pattern)
@@ -77,6 +79,9 @@ namespace DesignPatterns
                     break;
                 case (int)EnumPattern.ChainResponsability:
                     _ = new ProcessorChainResposability();
+                    break;
+                case (int)EnumPattern.Command:
+                    _ = new ProcessorCommand();
                     break;
                 default:
                     throw new ArgumentException("You must choose a pattern from the list above!");

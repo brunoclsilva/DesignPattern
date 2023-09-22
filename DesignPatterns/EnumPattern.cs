@@ -14,6 +14,7 @@
         Facade,
         Flyweight,
         Proxy,
-        ChainResponsability
+        ChainResponsability,
+        Command
     }
 }
