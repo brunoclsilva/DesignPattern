@@ -1,4 +1,5 @@
-﻿using DesignPatterns.Creational.AbstractFactory;
+﻿using DesignPatterns.Behavioral.ChainResponsability;
+using DesignPatterns.Creational.AbstractFactory;
 using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.FactoryMethod;
 using DesignPatterns.Creational.Prototype;
@@ -7,6 +8,9 @@ using DesignPatterns.Structural.Adapter;
 using DesignPatterns.Structural.Bridge;
 using DesignPatterns.Structural.Composite;
 using DesignPatterns.Structural.Decorator;
+using DesignPatterns.Structural.Facade;
+using DesignPatterns.Structural.Flyweight;
+using DesignPatterns.Structural.Proxy;
 
 namespace DesignPatterns
 {
@@ -26,6 +30,11 @@ namespace DesignPatterns
             Console.WriteLine("7 - Bridge");
             Console.WriteLine("8 - Composite");
             Console.WriteLine("9 - Decorator");
+            Console.WriteLine("10 - Facade");
+            Console.WriteLine("11 - Flyweight");
+            Console.WriteLine("12 - Proxy");
+            Console.WriteLine("\nBEHAVIORAL");
+            Console.WriteLine("13 - Chain of Responsability");
 
             Int32.TryParse(Console.ReadLine(), out int pattern);
             switch (pattern)
@@ -56,6 +65,18 @@ namespace DesignPatterns
                     break;
                 case (int)EnumPattern.Decorator:
                     _ = new ProcessorDecorator();
+                    break;
+                case (int)EnumPattern.Facade:
+                    _ = new ProcessorFacade();
+                    break;
+                case (int)EnumPattern.Flyweight:
+                    _ = new ProcessorFlyweight();
+                    break;
+                case (int)EnumPattern.Proxy:
+                    _ = new ProcessorProxy().Execute();
+                    break;
+                case (int)EnumPattern.ChainResponsability:
+                    _ = new ProcessorChainResposability();
                     break;
                 default:
                     throw new ArgumentException("You must choose a pattern from the list above!");

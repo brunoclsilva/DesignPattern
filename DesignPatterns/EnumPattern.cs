@@ -10,6 +10,10 @@
         Adapter,
         Bridge,
         Composite,
-        Decorator
+        Decorator,
+        Facade,
+        Flyweight,
+        Proxy,
+        ChainResponsability
     }
 }
