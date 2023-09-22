@@ -4,6 +4,9 @@ using DesignPatterns.Creational.FactoryMethod;
 using DesignPatterns.Creational.Prototype;
 using DesignPatterns.Creational.Singleton;
 using DesignPatterns.Structural.Adapter;
+using DesignPatterns.Structural.Bridge;
+using DesignPatterns.Structural.Composite;
+using DesignPatterns.Structural.Decorator;
 
 namespace DesignPatterns
 {
@@ -20,6 +23,9 @@ namespace DesignPatterns
             Console.WriteLine("5 - Prototype");
             Console.WriteLine("\nSTRUCTURALS");
             Console.WriteLine("6 - Adapter");
+            Console.WriteLine("7 - Bridge");
+            Console.WriteLine("8 - Composite");
+            Console.WriteLine("9 - Decorator");
 
             Int32.TryParse(Console.ReadLine(), out int pattern);
             switch (pattern)
@@ -41,6 +47,15 @@ namespace DesignPatterns
                     break;
                 case (int)EnumPattern.Adapter:
                     _ = new ProcessorAdapter();
+                    break;
+                case (int)EnumPattern.Bridge:
+                    _ = new ProcessorBridge();
+                    break;
+                case (int)EnumPattern.Composite:
+                    _ = new ProcessorComposite();
+                    break;
+                case (int)EnumPattern.Decorator:
+                    _ = new ProcessorDecorator();
                     break;
                 default:
                     throw new ArgumentException("You must choose a pattern from the list above!");

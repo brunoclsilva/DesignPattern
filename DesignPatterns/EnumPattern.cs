@@ -7,6 +7,9 @@
         AbstractFactory,
         Builder,
         Prototype,
-        Adapter
+        Adapter,
+        Bridge,
+        Composite,
+        Decorator
     }
 }
