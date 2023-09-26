@@ -15,6 +15,15 @@
         Flyweight,
         Proxy,
         ChainResponsability,
-        Command
+        Command,
+        Interpreter,
+        Iterator,
+        Mediator,
+        Memento,
+        Observer,
+        State,
+        Strategy,
+        TemplateMethod,
+        Visitor
     }
 }

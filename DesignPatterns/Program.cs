@@ -1,5 +1,12 @@
 ﻿using DesignPatterns.Behavioral.ChainResponsability;
 using DesignPatterns.Behavioral.Command;
+using DesignPatterns.Behavioral.Interpreter;
+using DesignPatterns.Behavioral.Iterator;
+using DesignPatterns.Behavioral.Mediator;
+using DesignPatterns.Behavioral.Memento;
+using DesignPatterns.Behavioral.Observer;
+using DesignPatterns.Behavioral.State;
+using DesignPatterns.Behavioral.Strategy;
 using DesignPatterns.Creational.AbstractFactory;
 using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.FactoryMethod;
@@ -37,6 +44,13 @@ namespace DesignPatterns
             Console.WriteLine("\nBEHAVIORAL");
             Console.WriteLine("13 - Chain of Responsability");
             Console.WriteLine("14 - Command");
+            Console.WriteLine("15 - Interpreter");
+            Console.WriteLine("16 - Iterator");
+            Console.WriteLine("17 - Mediator");
+            Console.WriteLine("18 - Memento");
+            Console.WriteLine("19 - Observer");
+            Console.WriteLine("20 - State");
+            Console.WriteLine("21 - Strategy");
 
             Int32.TryParse(Console.ReadLine(), out int pattern);
             switch (pattern)
@@ -82,6 +96,27 @@ namespace DesignPatterns
                     break;
                 case (int)EnumPattern.Command:
                     _ = new ProcessorCommand();
+                    break;
+                case (int)EnumPattern.Interpreter:
+                    _ = new ProcessorInterpreter();
+                    break;
+                case (int)EnumPattern.Iterator:
+                    _ = new ProcessorIterator();
+                    break;
+                case (int)EnumPattern.Mediator:
+                    _ = new ProcessorMediator();
+                    break;
+                case (int)EnumPattern.Memento:
+                    _ = new ProcessorMemento();
+                    break;
+                case (int)EnumPattern.Observer:
+                    _ = new ProcessorObserver();
+                    break;
+                case (int)EnumPattern.State:
+                    _ = new ProcessorState();
+                    break;
+                case (int)EnumPattern.Strategy:
+                    _ = new ProcessorStrategy();
                     break;
                 default:
                     throw new ArgumentException("You must choose a pattern from the list above!");
