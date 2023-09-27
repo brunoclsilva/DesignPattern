@@ -7,6 +7,8 @@ using DesignPatterns.Behavioral.Memento;
 using DesignPatterns.Behavioral.Observer;
 using DesignPatterns.Behavioral.State;
 using DesignPatterns.Behavioral.Strategy;
+using DesignPatterns.Behavioral.TemplateMethod;
+using DesignPatterns.Behavioral.Visitor;
 using DesignPatterns.Creational.AbstractFactory;
 using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.FactoryMethod;
@@ -51,6 +53,8 @@ namespace DesignPatterns
             Console.WriteLine("19 - Observer");
             Console.WriteLine("20 - State");
             Console.WriteLine("21 - Strategy");
+            Console.WriteLine("22 - Template Method");
+            Console.WriteLine("23 - Visitor");
 
             Int32.TryParse(Console.ReadLine(), out int pattern);
             switch (pattern)
@@ -117,6 +121,12 @@ namespace DesignPatterns
                     break;
                 case (int)EnumPattern.Strategy:
                     _ = new ProcessorStrategy();
+                    break;
+                case (int)EnumPattern.TemplateMethod:
+                    _ = new ProcessorTemplateMethod();
+                    break;
+                case (int)EnumPattern.Visitor:
+                    _ = new ProcessorVisitor();
                     break;
                 default:
                     throw new ArgumentException("You must choose a pattern from the list above!");
